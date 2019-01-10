@@ -16,7 +16,7 @@ def script(def Map vars) {
         output = sh(script: script,returnStdout: true)
       }
   } finally {
-      CpsThread.current().head.get().addAction(new LabelAction("Shell script ${stepName} "))
+      CpsThread.current().head.get().addAction(new LabelAction("${stepName} "))
   }
   return output
 }
